@@ -48,6 +48,63 @@
   </aside>
 
   <article id="content" role="main">
+    <h2>Using Zen Grids is easy!</h2>
+    <p>Here’s a simple example, a content column with a sidebar on each side, aligned to a 8 column grid:</p>
+    <pre><code>@import "zen";
+
+
+
+$zen-column-count: <span class="tooltip-target">8; <span class="tooltip down"><span class="pointer">//</span> <span class="text">Set the total number of columns in the grid.</span></span></span>
+$zen-gutter-width: <span class="tooltip-target">40px; <span class="tooltip up"><span class="pointer">//</span> <span class="text">Set the gutter size. A half-gutter is used on each side of each column.</span></span></span>
+
+
+
+.container {
+  @include zen-grid-container;
+}
+.sidebar1 {
+  @include <span id="ex-apply" class="tooltip-target">zen-grid-item(1, 2); <span class="tooltip up"><span class="pointer">//</span> <span class="text">Apply this mixin for each grid item in the container.</span></span></span>
+}
+
+
+
+
+.content {
+  @include zen-grid-item(<span id="ex-grid-item" class="tooltip-target">3, 5); <span class="tooltip down"><span class="pointer">//</span> <span class="text">Position this grid item in the 3rd column.</span></span> <span class="tooltip up"><span class="pointer">//</span> <span class="text">Make this grid item span 5 columns.</span></span></span>
+}
+
+.sidebar2 {
+  @include zen-grid-item(8, 1);
+}</code></pre>
+
+    <p><strong><em>That’s it!</em></strong> 1 import statement, 2 variables, and 2 mixins. You’re done. And, here’s the results:</p>
+
+    <figure id="example">
+      <p class="grid-bg">
+        <span class="col-1">1</span>
+        <span class="col-2">2</span>
+        <span class="col-3">3</span>
+        <span class="col-4">4</span>
+        <span class="col-5">5</span>
+        <span class="col-6">6</span>
+        <span class="col-7">7</span>
+        <span class="col-8">8</span>
+      </p>
+      <div class="container">
+        <p class="content">
+          .content — <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor…</em>
+        </p>
+        <p class="sidebar1">
+          .sidebar1
+        </p>
+        <p class="sidebar2">
+          .sidebar2
+        </p>
+      </div>
+    </figure>
+
+    <p>Plus, within the <code>.container</code> element, the <code>.sidebar1</code>, <code>.sidebar2</code> and <code>.content</code> items can be arranged in any HTML source order.</p>
+
     <h2>Coming soon…</h2>
 
     <p>Zen Grids 1.0 is coming soon!<br>

@@ -27,6 +27,42 @@ video {
   }
 }
 
+img, embed, iframe, object, video {
+  max-width: 100%;
+  height: auto;
+}
+
+a:link,
+a:visited {
+  color: #0c3043;
+}
+
+a:hover,
+a:focus {
+}
+
+pre {
+  display: inline-block;
+  margin: $zen-gutter-width 0;
+  padding: 1px 0 0 5px;
+  background-image: url(/images/background-precode.png);
+  background-repeat: repeat;
+  background-position: left 1px;
+  font-weight: bold;
+  &, & code {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+code {
+  font-size: 1.15em;
+}
+
+.more {
+  text-align: right;
+}
+
 // Skip link styling
 #skip-link {
   margin: 0;
@@ -65,18 +101,4 @@ video {
 
 #main-menu h2 {
   @include element-invisible;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-a:link,
-a:visited {
-  color: #0c3043;
-}
-
-a:hover,
-a:focus {
 }

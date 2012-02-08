@@ -75,3 +75,27 @@
     top: 5px;
   }
 }
+
+#ex-apply {
+  .tooltip {
+    left: 50px;
+  }
+  .text {
+    right: -8em;
+  }
+}
+
+#ex-grid-item {
+  .down .text {
+    margin-right: -27px;
+  }
+  .up {
+    left: 25px;
+  }
+  .up .text {
+  }
+  .text {
+    width: 150px;
+    right: -1.75em;
+  }
+}

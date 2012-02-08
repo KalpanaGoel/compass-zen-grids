@@ -1,0 +1,32 @@
+@import "base";
+
+$zen-column-count: 8;
+$zen-gutter-width: 10px;
+
+#example {
+  position: relative;
+  margin: 0 -5px;
+
+  .container {
+    @include zen-grid-container;
+    padding-top: 20px;
+    height: 80px;
+  }
+  .content,
+  .sidebar1,
+  .sidebar2 {
+    @include zen-grid-item-base;
+    margin: 0;
+    height: 75px;
+  }
+  .sidebar1 {
+    @include zen-grid-item(1, 2);
+  }
+  .content {
+    @include zen-grid-item(3, 5);
+  }
+  .sidebar2 {
+    @include zen-grid-item(8, 1);
+  }
+}
+
