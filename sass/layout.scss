@@ -14,9 +14,17 @@
 #features,
 #content,
 #main-menu,
+#aside1,
+#aside2,
 #footer {
   @include zen-grid-item-base;
-  margin: $zen-gutter-width 0;
+  margin: 0 0 $zen-gutter-width 0;
+}
+#header,
+#features,
+#content,
+#main-menu,
+#footer {
   text-align: center;
 }
 
