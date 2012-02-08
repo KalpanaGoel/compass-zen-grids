@@ -1,0 +1,54 @@
+@import "base";
+
+$grid-bg-column-count: 8;
+$grid-bg-gutter-width: 10px;
+$grid-bg-height: 100px;
+$grid-bg-color: #cdf;
+$grid-bg-color: #ffdede;
+
+.grid-bg {
+  @include zen-grid-container;
+  position: absolute;
+  margin: 0;
+  width: 100%;
+
+  span {
+    @include zen-grid-item-base;
+    height: $grid-bg-height;
+    text-align: center;
+    background-color: $grid-bg-color;
+    padding: 0;
+    border: {
+      left: zen-half-gutter($grid-bg-gutter-width) solid #fff;
+      right: zen-half-gutter($grid-bg-gutter-width) solid #fff;
+    }
+    color: #fff;
+    @include text-shadow(#346 0 0 4px);
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  .col-1 {
+    @include zen-grid-item(1, 1, $column-count: $grid-bg-column-count, $gutter-width: $grid-bg-gutter-width);
+  }
+  .col-2 {
+    @include zen-grid-item(2, 1, $column-count: $grid-bg-column-count, $gutter-width: $grid-bg-gutter-width);
+  }
+  .col-3 {
+    @include zen-grid-item(3, 1, $column-count: $grid-bg-column-count, $gutter-width: $grid-bg-gutter-width);
+  }
+  .col-4 {
+    @include zen-grid-item(4, 1, $column-count: $grid-bg-column-count, $gutter-width: $grid-bg-gutter-width);
+  }
+  .col-5 {
+    @include zen-grid-item(5, 1, $column-count: $grid-bg-column-count, $gutter-width: $grid-bg-gutter-width);
+  }
+  .col-6 {
+    @include zen-grid-item(6, 1, $column-count: $grid-bg-column-count, $gutter-width: $grid-bg-gutter-width);
+  }
+  .col-7 {
+    @include zen-grid-item(7, 1, $column-count: $grid-bg-column-count, $gutter-width: $grid-bg-gutter-width);
+  }
+  .col-8 {
+    @include zen-grid-item(8, 1, $column-count: $grid-bg-column-count, $gutter-width: $grid-bg-gutter-width);
+  }
+}
